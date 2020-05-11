@@ -1,0 +1,27 @@
+.color{
+    color:red;
+}
+.order1{
+    color:red;
+}
+.order2{
+    color:green;
+}
+.bill
+{
+    
+    height: 250px;
+  width: 50%;
+  font-size: 12px;
+}
+.confirm
+{
+    
+    height: 160px;
+  width: 50%;
+  font-size: 12px;
+}
+.confirmdiv
+{
+    color:lightblue;
+}

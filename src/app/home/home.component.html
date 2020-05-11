@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Stock Management</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/css/mdb.min.css" rel="stylesheet">
+ 
+ <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/js/mdb.min.js"></script>
+ 
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+
+ <style type="text/css">
+   input[type=number]::-webkit-inner-spin-button, 
+   input[type=number]::-webkit-outer-spin-button { 
+       -webkit-appearance: none;
+       -moz-appearance: none;
+       appearance: none;
+       margin: 0; 
+   }
+ </style>
+ 
+ 
+</head>
+
+<body>
+ 	<!--Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-dark teal">
+
+    <!-- Navbar brand -->
+    
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Collapsible content -->
+  <div class="collapse navbar-collapse" id="basicExampleNav">
+
+    
+          <a class="dropdown-item" routerLink="/rawmaterialTrack">Track RawMaterial Stock</a>
+          <a class="dropdown-item" routerLink="/productTrack"> Track Product Stock</a>
+          
+        
+          <a class="dropdown-item" routerLink="/rawmaterialprocessdate">Set RawMaterial Stock Process Date</a>
+          <a class="dropdown-item" routerLink="/productexitdate">Set Product Stock Exit Date</a>
+          
+       
+          <a class="dropdown-item" routerLink="/rawmaterialupdate">Update RawMaterial Stock</a>
+          <a class="dropdown-item" routerLink="/productupdate">Update Product Stock</a>
+          <button (click)="logout()">Logout</button>
+    
+
+    
+  </div>
+  <!-- Collapsible content -->
+
+</nav>
+<!--/.Navbar-->
+
+
+<div class="container">
+  <h1> </h1>
+</div>
+
+<router-outlet></router-outlet>
+
+</body>
+</html>

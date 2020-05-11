@@ -1,0 +1,22 @@
+<!-- process date for raw material stock-->
+<div class="container pb-5" id="RawMaterialStockID">
+    <div class="row pb-5 mt-5">
+      <div class="col-md-6 offset-md-3 mt-3">
+        
+        <form class="text-center border border-light p-5" #processraw="ngForm" (ngSubmit)="processupdate(processraw.value)"> 
+  
+            <p class="h4 mb-4"> Set Process Date for Raw Material Stock</p>
+  
+            <p>Enter Order ID</p>
+            <input type="number" id="" name="rawid" class="form-control mb-4" placeholder="Enter Raw Material Order ID" ngModel>
+            <p>EnterProcess Date</p>
+            <input type="date"  id="" name="rawdate" class="form-control mb-4" placeholder="Enter process Date" ngModel>
+  
+            <button class="btn teal text-white btn rounded btn-block" type="submit">Submit</button>
+        </form>
+        
+      </div>
+    </div>  
+  </div>
+  <!-- end of raw material stock date -->
+    

@@ -1,0 +1,30 @@
+export class ProductStock
+{
+    name:string;
+    pricePerUnit:number;
+    quantityValue:number;
+    quantityUnit:number;
+    price:number;
+    warehouseId:String;
+    deliveryDate:String;
+    manufacturingDate:String;
+    expiryDate:String;
+    qualityCheck:string;
+    exitDate:String;
+    orderId:number;
+    public constructor(name:string,pricePerUnit:number,quantityValue:number,quantityUnit:number,price:number,warehouseId:string,deliveryDate:String,manufacturingDate:String,expiryDate:String,qualityCheck:string,exitDate:String,orderId:number)
+{
+      this.name=name;
+      this.pricePerUnit=pricePerUnit;
+      this.quantityValue=quantityValue;
+      this.quantityUnit=quantityUnit;
+      this.price=price;
+      this.warehouseId=warehouseId;
+      this.deliveryDate=deliveryDate;
+      this.manufacturingDate=manufacturingDate;
+      this.expiryDate=expiryDate;
+      this.qualityCheck=qualityCheck;
+      this.exitDate=exitDate;
+      this.orderId=orderId; 
+}
+}

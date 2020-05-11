@@ -1,0 +1,75 @@
+<!-- login -->
+  <nav class="navbar navbar-expand-sm   bg-dark navbar-dark">
+    <ul class="navbar-nav">
+      <li *ngIf="check" class="nav-item" >
+        <a class="nav-link" routerLink='list'>Display RawMaterial Orders</a>
+
+      </li>
+
+      <li *ngIf="check" class="nav-item ">
+        <a class="nav-link" routerLink='listproduct'>Display Product orders</a>
+
+      </li>
+      <li *ngIf="check" class="nav-item ">
+        <a class="nav-link" routerLink='add'><!--<span class="material-icons">add_shopping_cart</span>-->Order Raw Material</a>
+
+      </li>
+      <li *ngIf="check" class="nav-item ">
+        <a class="nav-link" routerLink='addproductorder'>Order Product </a>
+
+      </li>
+      <li *ngIf="!check" class="nav-item " (click)="loginCheck()">
+        <a class="nav-link">User Login</a>
+
+      </li>
+      <li *ngIf="!check" class="nav-item " (click)="adminCheck()">
+        <a class="nav-link" >Admin Login</a>
+
+      </li>
+     
+     
+    </ul>
+  </nav>
+  
+  
+  <div *ngIf="login" class="container ">
+    <h2>User Login</h2>
+    <form class=" w-50" #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+      <div class="form-group">
+        <label for="ID">User ID:</label>
+        <input ngModel type="number" class="form-control" id="uid" placeholder="Enter User ID" name="userid">
+      </div>
+      <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input ngModel type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+      </div>
+      <button type="submit" class="btn btn-primary" >Submit</button>
+    </form>
+  </div>
+
+<div *ngIf="admin" class="container pb-5" id="login">
+    <div class="row pb-5 mt-5">
+      <div class="col-md-6 offset-md-3 mt-3">
+        
+        <form class="text-center border border-light p-5" #login="ngForm" (ngSubmit)="dologin(login.value)">
+  
+            <p class="h4 mb-4">Login</p>
+    <p>Enter Username</p>
+    
+    <input type="text" id="" name="username" class="form-control mb-4" placeholder="Enter Username" ngModel>
+            
+    <p>Enter password</p>
+
+            <input type="password" id="" name="password" class="form-control mb-4" placeholder="Enter password" ngModel>
+  
+            <button class="btn teal text-white btn rounded btn-block" type="submit">Submit</button>
+        </form>
+        <div class="center"><a class="dropdown-item" routerLink="/forgot"><button>Forgot Password</button></a>
+        </div>
+      </div>
+    </div>  
+  </div>
+ <div [innerHTML]="message"></div>
+  <!-- login -->
+
+

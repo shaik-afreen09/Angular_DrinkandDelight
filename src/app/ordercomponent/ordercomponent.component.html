@@ -1,0 +1,163 @@
+<head>
+  <title>Place an order</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<div *ngIf="allcheck" class="container" >
+  <br>
+  <br>
+  <h1>Place An Order</h1>
+    <form class="was-validated">
+        
+    <div class="form-group w-25">
+       
+    
+        <label for="inputname">Raw material Name</label>
+                <select class="form-control custom-select form-control browser-default"  (change)='emptyCheckSpec()' [(ngModel)]="selected" name="something1"   required>
+        <option *ngFor="let CodeListPort of spec" #a value="{{CodeListPort.rmsid}}">{{CodeListPort.rmname}}</option>
+        </select>
+        <div class="invalid-feedback">please select rawmatrial</div>
+     </div>
+        <div class="form-group w-25">
+        <label for="inputname1">Distributor Name   </label>
+      
+           
+        <select class="form-control custom-select form-control browser-default" (change)='emptyCheckWare()'  [(ngModel)]="selected1" name="something" required>
+          <option *ngFor="let CodeListPort of war" #b value="{{CodeListPort.warehouseid}}">{{CodeListPort.name}}</option>
+        </select>
+        <div class="invalid-feedback">please select distributor</div>
+      </div>
+        <div class="form-group w-25">
+        <label for="inputname2">Supplier Name</label>
+
+       
+        <select id="myElement" class="form-control custom-select form-control browser-default" (change)='emptyCheck1Sup()' [(ngModel)]="selected2" name="something2" required>
+        <option *ngFor="let CodeListPort of sup"  #c value="{{CodeListPort.supplierid}}">{{CodeListPort.name}}</option>
+        </select>
+        <div class="invalid-feedback">please select any supplier</div>
+
+    </div>
+    <div class="form-group w-25">
+        <label for="pwd">Quantity:</label>
+        <input type="number" class="form-control" name="pwd"  #mySelect required [(ngModel)]="quanvalue" (change)='onOptionsSelected(mySelect.value)'>
+        <div class="invalid-feedback">please select Quantiy value</div>
+
+      </div>
+      <!--
+                <div  *ngIf="!check">the total price is{{quanvalue*quantity_p_u}}</div>
+
+        <div *ngIf="!check"><h3>Your selected Raw Material  item is {{rmname}} with quantity of {{quanvalue}} <br>from the distributor {{warename}} and supplier {{supname}}</h3></div>
+      <div><input class="btn-secondary btn"type="submit" (click)="onSubmit()"></div>-->
+     
+</form>
+<div *ngIf="confirmcheck"class="confirm">
+  <div class="confirmdiv"><h5>Dear Customer You have Selected </h5></div>
+  <div class="row">
+    <div class="col-6">
+        <h6>RawMaterialName</h6>
+    </div>
+    <div class="col-6">
+        <h6><span class="color">: {{rmname}}</span></h6>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+        <h6>Distributor Name</h6>
+    </div>
+    <div class="col-6">
+        <h6><span class="color">: {{warename}}</span></h6>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+        <h6>Supplier Name</h6>
+    </div>
+    <div class="col-6">
+        <h6><span class="color">: {{supname}}</span></h6>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+        <h6>Quantity</h6>
+    </div>
+    <div class="col-6">
+        <h6><span class="color">: {{quanvalue}}</span></h6>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+        <h6>Total Price</h6>
+    </div>
+    <div class="col-6">
+        <h6><span class="color">: {{totcon}}</span></h6>
+    </div>
+   
+  </div>
+  
+  
+
+</div>
+<div *ngIf="confirmcheck"><br></div>
+<div><input class="btn-primary btn"type="submit" (click)="onSubmit()"></div>
+<div>{{this.message1}}</div>
+<br><br><br>
+
+<div *ngIf="check4">
+  
+  <div class="bill">
+ <!--<h3 class="order2">Order SuccessFully placed</h3>-->   
+    <h3 class="order1"><u>Order Summary</u></h3>
+    <br>
+    
+  <div class="row">
+    <div class="col-6">
+        <h5>OrderId</h5>
+    </div>
+   <div class="col-6">
+        <h5><span class="color">: {{serorder.orderid}}</span></h5>
+    </div>
+</div>
+<div class="row">
+  <div class="col-6">
+      <h5>RawMaterialName</h5>
+  </div>
+  <div class="col-6">
+      <h5><span class="color">: {{rmname}}</span></h5>
+  </div>
+</div>
+<div class="row">
+  <div class="col-6">
+      <h5>Distributor Name</h5>
+  </div>
+  <div class="col-6">
+      <h5><span class="color">: {{warename}}</span></h5>
+  </div>
+</div>
+<div class="row">
+  <div class="col-6">
+      <h5>Supplier Name</h5>
+  </div>
+  <div class="col-6">
+      <h5><span class="color">: {{supname}}</span></h5>
+  </div>
+</div>
+<div class="row">
+  <div class="col-6">
+      <h5>Quantity</h5>
+  </div>
+  <div class="col-6">
+      <h5><span class="color">: {{quanvalue}}</span></h5>
+  </div>
+</div>
+<div class="row">
+  <div class="col-6">
+      <h5>Total Price</h5>
+  </div>
+  <div class="col-6">
+      <h5><span class="color">: {{total}}</span></h5>
+  </div>
+</div>
+</div>
+
+</div>
+ </div>
+ 

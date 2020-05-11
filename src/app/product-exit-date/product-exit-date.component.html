@@ -1,0 +1,24 @@
+<!-- exit date for product stock-->
+<div class="container pb-5" id="RawMaterialStockID">
+    <div class="row pb-5 mt-5">
+      <div class="col-md-6 offset-md-3 mt-3">
+        
+        <form class="text-center border border-light p-5" #exidate="ngForm" (ngSubmit)="updateexit(exidate.value)">
+  
+            <p class="h4 mb-4"> Set Exit Date for Product Stock</p>
+  
+            <p>Enter Order ID</p>
+            <input type="number" id="" name="exitdate" class="form-control mb-4" placeholder="Enter Product Order ID" ngModel required>
+            <p>Enter Exit Date</p>
+            <input type="date"  id="" name="productid" class="form-control mb-4" placeholder="Enter Exit Date" ngModel required>
+  
+            <button class="btn teal text-white btn rounded btn-block" type="submit">Submit</button>
+        </form>
+        
+      </div>
+    </div>  
+  </div>
+  <!-- end of product stock date -->
+ 
+  
+  
