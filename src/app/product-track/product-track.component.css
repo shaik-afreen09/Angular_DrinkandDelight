@@ -8,3 +8,6 @@ table {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+#x {
+  border: 0;
+}

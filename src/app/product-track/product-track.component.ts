@@ -10,18 +10,30 @@ export class ProductTrackComponent implements OnInit {
   data:ProductStock = new ProductStock('',0,0,0,0,'','','','','','',0)
   constructor(private productService: ProductStockService) { }
 test:string;
+pslist:ProductStock[]=[];
+single: boolean=false;
+table:boolean=false;
   ngOnInit(): void {
+    this.productService.getAll().subscribe((data)=>this.pslist=data);
   }
-requestdata(data){
+  showtable()
+  {
+    this.test='';
+this.table=true;
+this.single=false;
+  }
 
+requestdata(data){
+  this.table=false;
+  this.single=true; 
 console.log(data);
-if(data.productid.length==0)
+if(data.orderId.length==0)
 this.test=`<center>Please Enter Product Id</center>`;
  else
-  this.productService.getOrder(data.productid).subscribe((data)=>{
+  this.productService.getOrder(data.orderId).subscribe((data)=>{
 console.log(data.name);
 this.data=data;
-this.test=`<h2 style="text-align:justify">Product Stock Details </h2> 
+this.test=`<h2 style="text-align:center">Product Stock Details </h2> 
 <table class="table table-striped col-md-6 container">
    <center> <tr>
       <th>Order Id: ${data.orderId}</th>

@@ -5,14 +5,14 @@
         
         <form class="text-center border border-light p-5" #processraw="ngForm" (ngSubmit)="processupdate(processraw.value)"> 
   
-            <p class="h4 mb-4"> Set Process Date for Raw Material Stock</p>
+            <p class="h4 text-left"> Set Process Date for Raw Material Stock</p>
   
-            <p>Enter Order ID</p>
+            <p class="text-left">Enter Order ID</p>
             <input type="number" id="" name="rawid" class="form-control mb-4" placeholder="Enter Raw Material Order ID" ngModel>
-            <p>EnterProcess Date</p>
+            <p class="text-left">EnterProcess Date</p>
             <input type="date"  id="" name="rawdate" class="form-control mb-4" placeholder="Enter process Date" ngModel>
   
-            <button class="btn teal text-white btn rounded btn-block" type="submit">Submit</button>
+            <button class="btn teal text-white btn rounded" type="submit">Submit</button>
         </form>
         
       </div>

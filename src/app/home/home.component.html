@@ -32,8 +32,10 @@
 </head>
 
 <body>
- 	<!--Navbar-->
-  <nav class="navbar navbar-expand-lg navbar-dark teal">
+   <!--Navbar-->
+   <br/>
+   
+  <nav class="navbar navbar-expand-sm navbar-dark black">
 
     <!-- Navbar brand -->
     
@@ -47,17 +49,20 @@
   <div class="collapse navbar-collapse" id="basicExampleNav">
 
     
-          <a class="dropdown-item" routerLink="/rawmaterialTrack">Track RawMaterial Stock</a>
-          <a class="dropdown-item" routerLink="/productTrack"> Track Product Stock</a>
+          <a class="nav-link" routerLink="/rawmaterialTrack">Track RawMaterial Stock</a>
+          <a class="nav-link" routerLink="/productTrack"> Track Product Stock</a>
           
         
-          <a class="dropdown-item" routerLink="/rawmaterialprocessdate">Set RawMaterial Stock Process Date</a>
-          <a class="dropdown-item" routerLink="/productexitdate">Set Product Stock Exit Date</a>
+          <a class="nav-link" routerLink="/rawmaterialprocessdate">Set RawMaterial Stock Process</a>
+          <a class="nav-link" routerLink="/productexitdate">Set Product Stock Exit</a>
           
        
-          <a class="dropdown-item" routerLink="/rawmaterialupdate">Update RawMaterial Stock</a>
-          <a class="dropdown-item" routerLink="/productupdate">Update Product Stock</a>
-          <button (click)="logout()">Logout</button>
+          <a class="nav-link" routerLink="/rawmaterialupdate">Update RawMaterial</a>
+          <a class="nav-link" routerLink="/productupdate">Update Product</a>
+        
+          <button  (click)="logout()" type="button" class=" float-right btn btn-default btn-sm">
+              <span class="glyphicon glyphicon-log-out"></span><span class="glyphicon">&#xe163;</span> Log out
+            </button>
     
 
     

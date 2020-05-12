@@ -5,16 +5,16 @@
         
         <form class="text-center border border-light p-5" #forgot="ngForm" (ngSubmit)="requestdata(forgot.value)">
   
-            <p class="h4 mb-4">Forgot Password</p>
-    <p>Enter Username</p>
+            <p class="h4 text-left">Forgot Password</p>
+    <p class="text-left">Enter Username</p>
     
     <input type="text" id="" name="username" class="form-control mb-4" placeholder="Enter Username" ngModel>
             
-    <p>Enter correct password</p>
+    <p class="text-left">Enter correct password</p>
 
             <input type="password" id="" name="forgotpassword" class="form-control mb-4" placeholder="Enter correct password" ngModel>
   
-            <button class="btn teal text-white btn rounded btn-block" type="submit">Submit</button>
+            <button class="btn teal text-white btn rounded" type="submit">Submit</button>
         </form>
         
       </div>

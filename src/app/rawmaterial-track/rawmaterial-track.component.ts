@@ -9,24 +9,38 @@ import {RawMaterialStock} from '../rawmaterialstock/rawmaterialstock';
 })
 export class RawmaterialTrackComponent implements OnInit {
   message:string;
+  table:boolean=false;
+  rmsid:number=0;
   rms:RawMaterialStock = new RawMaterialStock('',0,0,0,0,'','','','','','',0)
   constructor(private rawservice: RawMaterialStockService) { }
-
+  rmslist: RawMaterialStock[]=[];
+  single: boolean=false;
   ngOnInit(): void {
+    this.rawservice.getAll().subscribe((data)=>this.rmslist=data);
   }
+
+  showtable()
+  {
+    this.message='';
+this.table=true;
+this.single=false;
+  }
+
   requestdata(data)
   {
+//if(data==null)
+console.log(data);
 
-
-this.rawservice.getOrder(data.rawid).subscribe((rms)=>{
-  
+this.rawservice.getOrder(data.orderId).subscribe((rms)=>{
+  this.table=false;
+  this.single=true; 
   this.rms=rms;
   if(rms.orderId==0)
   this.message=`<center>Please Enter Correct Rawmaterial Id. Entered Rawmaterial id is Invalid'</
   center>`;
   else
-  this.message=`<h2 style="text-align:justify">Raw Material Stock Details </h2> 
-  <table class="table table-striped col-md-6 container">
+  this.message=`<h2 style="text-align:center">Raw Material Stock Details </h2> 
+  <table *ngIf="single" class="table table-striped col-md-6 container">
   <tr>
      <th>Order Id : ${rms.orderId}</th>
   </tr>
@@ -57,9 +71,7 @@ this.rawservice.getOrder(data.rawid).subscribe((rms)=>{
    <tr>
       <th>Expiry Date : ${rms.expiryDate}</th>
    </tr>
-   <tr>
-      <th>Quality Check : ${rms.qualityCheck}</th>
-   </tr>
+  
    <tr>
       <th>Process Date : ${rms.processDate}</th>
    </tr>
@@ -68,7 +80,7 @@ this.rawservice.getOrder(data.rawid).subscribe((rms)=>{
   `;
   
 },error=>{
- 
+ alert('Please Enter Correct Rawmaterial Id. Entered Rawmaterial id is Invalid');
   
   
   

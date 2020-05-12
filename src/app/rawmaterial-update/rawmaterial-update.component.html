@@ -5,16 +5,16 @@
         
         <form class="text-center border border-light p-5" #update="ngForm" (ngSubmit)="updatedata(update.value)">
   
-            <p class="h4 mb-4"> Update Raw Material Stock</p>
+            <p class="h4 text-left"> Update Raw Material Stock</p>
   
-            <p>Enter Order ID</p>
+            <p class="text-left">Enter Order ID</p>
             <input type="number" id="" name="rawid" class="form-control mb-4" placeholder="Enter Raw Material Order ID" ngModel>
-            <p>Enter Manufacturing Date</p>
+            <p class="text-left">Enter Manufacturing Date</p>
             <input type="date"  id="" name="mandate" class="form-control mb-4" placeholder="Set Manufacturing Date" ngModel>
-            <p>Enter Expiry Date</p>
+            <p class="text-left">Enter Expiry Date</p>
             <input type="date"  id="" name="exitdate" class="form-control mb-4" placeholder="Set Expiry Date" ngModel>
   
-            <button class="btn teal text-white btn rounded btn-block" type="submit">Submit</button>
+            <button class="btn teal text-white btn-default rounded" type="submit">Submit</button>
         </form>
         
       </div>

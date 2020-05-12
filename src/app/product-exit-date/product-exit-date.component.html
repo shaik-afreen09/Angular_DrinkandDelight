@@ -5,14 +5,14 @@
         
         <form class="text-center border border-light p-5" #exidate="ngForm" (ngSubmit)="updateexit(exidate.value)">
   
-            <p class="h4 mb-4"> Set Exit Date for Product Stock</p>
+            <p class="h4 text-left"> Set Exit Date for Product Stock</p>
   
-            <p>Enter Order ID</p>
+            <p class="text-left">Enter Order ID</p>
             <input type="number" id="" name="exitdate" class="form-control mb-4" placeholder="Enter Product Order ID" ngModel required>
-            <p>Enter Exit Date</p>
+            <p class="text-left">Enter Exit Date</p>
             <input type="date"  id="" name="productid" class="form-control mb-4" placeholder="Enter Exit Date" ngModel required>
   
-            <button class="btn teal text-white btn rounded btn-block" type="submit">Submit</button>
+            <button class="btn-md teal text-white btn rounded" type="submit">Submit</button>
         </form>
         
       </div>

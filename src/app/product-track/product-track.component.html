@@ -6,17 +6,39 @@
         
         <form class="text-center border border-light p-5" #product="ngForm" (ngSubmit)="requestdata(product.value)">
   
-            <p class="h4 mb-4">Product Stock</p>
+            <p class="h4 text-left">Product Stock</p>
   
-            <p>Enter Order ID</p>
-            <input type="number" id="" name="productid" class="form-control mb-4" placeholder="Enter Product Order ID" ngModel>
+            <p class="text-left">Enter Order ID</p>
+            <input type="number" id="" name="orderId" class="form-control mb-4" placeholder="Enter Product Order ID" ngModel>
   
-            <button class="btn teal text-white btn rounded btn-block" type="submit">Submit</button>
+            <button class="btn teal text-white btn rounded" type="submit">Submit</button>
         </form>
-        
+        <div class="text-center"><button class="btn teal text-white btn rounded" (click)="showtable()">Fetch All Orders</button> 
+        </div>
       </div>
     </div>  
   </div>
   <div [innerHTML]="test"></div>
   <!-- end of Product material stock -->
  
+  <!-- end of raw material stock -->
+<table *ngIf="table" class="table  table-sm w-75 table-hover">
+
+    <thead>
+      <tr>
+        <th>Order Id</th>
+        <th>Name</th>
+        <th>Action</th>
+      </tr>
+      
+    </thead>
+    <tbody>
+      <tr *ngFor="let r of pslist" >
+          <td> <input id="x" type="text" [(ngModel)]= "r.orderId" readonly></td>
+          <td><input id="x" type="text" [(ngModel)]= "r.name" readonly></td>
+         <td> <button (click)="requestdata(r)" class="btn teal text-white btn rounded" >Fetch Order</button></td>
+      </tr>
+    </tbody>
+      </table>
+    
+      

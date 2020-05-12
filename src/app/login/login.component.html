@@ -1,5 +1,5 @@
 <!-- login -->
-  <nav class="navbar navbar-expand-sm   bg-dark navbar-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark black">
     <ul class="navbar-nav">
    
       <li *ngIf="!check" class="nav-item " (click)="loginCheck()">
@@ -17,7 +17,7 @@
   
   
   <div *ngIf="login" class="container ">
-    <h2>User Login</h2>
+<h2>User Login</h2>
     <form class=" w-50" #f="ngForm" (ngSubmit)="onSubmit(f.value)">
       <div class="form-group">
         <label for="ID">User ID:</label>
@@ -37,18 +37,21 @@
         
         <form class="text-center border border-light p-5" #login="ngForm" (ngSubmit)="dologin(login.value)">
   
-            <p class="h4 mb-4">Login</p>
-    <p>Enter Username</p>
+            <p class=" h4 text-left">Login</p>
+            <br/>
+    <p class="text-left">Enter Username</p>
     
     <input type="text" id="" name="username" class="form-control mb-4" placeholder="Enter Username" ngModel>
             
-    <p>Enter password</p>
+    <p class="text-left">Enter password</p>
 
             <input type="password" id="" name="password" class="form-control mb-4" placeholder="Enter password" ngModel>
-  
-            <button class="btn teal text-white btn rounded btn-block" type="submit">Submit</button>
+            <div class="btn-group btn-group-justified" role="group" aria-label="Basic example">
+            <button id="btn" class="btn teal text-white " type="submit">Submit</button>
+            <a class="text-white" routerLink="/forgot"> <button id="btn" class="btn teal text-white">Forgot Password</button></a> 
+          </div>
         </form>
-        <div class="center"><a class="dropdown-item" routerLink="/forgot"><button>Forgot Password</button></a>
+        <div class="center">
         </div>
       </div>
     </div>  

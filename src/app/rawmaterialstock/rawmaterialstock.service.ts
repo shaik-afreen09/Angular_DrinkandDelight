@@ -14,7 +14,10 @@ export class RawMaterialStockService
    {
       return this.httpClient.get<any>('http://localhost:8015/rawmaterial/getOrder/'+orderId);
    }
-
+   public getAll()  : any 
+   {
+      return this.httpClient.get<any>('http://localhost:8015/rawmaterial/getAll');
+   }
    public updateProcessDate(rawid:number,rawdate:String) : any
    {
     const httpOptions = {

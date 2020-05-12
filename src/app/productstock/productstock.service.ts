@@ -14,7 +14,10 @@ export class ProductStockService {
    {
       return this.httpClient.get<any>('http://localhost:8015/productstock/getOrder/'+orderId);
    }
-
+   public getAll()  : any 
+   {
+      return this.httpClient.get<any>('http://localhost:8015/productstock/getAll');
+   }
    public updateExitDate(exitdate:String,orderid:number) : any
    {
     const httpOptions = {
