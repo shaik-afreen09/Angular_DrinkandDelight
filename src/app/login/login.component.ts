@@ -56,6 +56,8 @@ this.message=`<center>Username or password is incorrect. Please Try again</cente
     this.check=true;
     this.admin=false;
     this.service.allCkeck(details.userid);
+    //redirects to your navbar if login successfull and to your dashbaord. UserComponent is main component that contains your nav bar 
+    this.router.navigate(['/user']);
     }
     else{
       alert("Not a valid user")
@@ -80,8 +82,9 @@ else{
    loginCheck()
    {
     this.login=true;
-   
+    
     this.admin=false;
+   
 
    }
    adminCheck()

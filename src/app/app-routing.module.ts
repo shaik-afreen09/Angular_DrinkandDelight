@@ -18,6 +18,7 @@ import { OrdercomponentComponent } from './ordercomponent/ordercomponent.compone
 import { FetchOrdersComponent } from './fetch-orders/fetch-orders.component';
 import { OrderProductComponent } from './order-product/order-product.component';
 import { FetchProductOrdersComponent } from './fetch-product-orders/fetch-product-orders.component';
+import { UserComponentComponent } from './user-component/user-component.component';
 const routes: Routes = [
   {
     path:'',
@@ -42,11 +43,16 @@ const routes: Routes = [
  path:'login',component:LoginComponent ,
 
 },
+{
+  path:'user',
+  component:UserComponentComponent,
+  children:
+  [
 {path:'add',component:OrdercomponentComponent},
   {path:'list',component:FetchOrdersComponent},
   {path:'addproductorder',component:OrderProductComponent},
   {path:'listproduct',component:FetchProductOrdersComponent}
-  
+  ]} 
 ];
 
 @NgModule({

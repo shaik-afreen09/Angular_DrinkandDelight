@@ -26,6 +26,7 @@ import { FetchOrdersComponent } from './fetch-orders/fetch-orders.component';
 import { OrderProductComponent } from './order-product/order-product.component';
 import { FetchProductOrdersComponent } from './fetch-product-orders/fetch-product-orders.component';
 import {LoginComponent} from './login/login.component';
+import { UserComponentComponent } from './user-component/user-component.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +45,8 @@ import {LoginComponent} from './login/login.component';
     OrdercomponentComponent,
     FetchOrdersComponent,
     OrderProductComponent,
-    FetchProductOrdersComponent
+    FetchProductOrdersComponent,
+    UserComponentComponent
     
   ],
   imports: [

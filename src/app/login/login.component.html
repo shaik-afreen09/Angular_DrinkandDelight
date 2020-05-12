@@ -1,23 +1,7 @@
 <!-- login -->
   <nav class="navbar navbar-expand-sm   bg-dark navbar-dark">
     <ul class="navbar-nav">
-      <li *ngIf="check" class="nav-item" >
-        <a class="nav-link" routerLink='list'>Display RawMaterial Orders</a>
-
-      </li>
-
-      <li *ngIf="check" class="nav-item ">
-        <a class="nav-link" routerLink='listproduct'>Display Product orders</a>
-
-      </li>
-      <li *ngIf="check" class="nav-item ">
-        <a class="nav-link" routerLink='add'><!--<span class="material-icons">add_shopping_cart</span>-->Order Raw Material</a>
-
-      </li>
-      <li *ngIf="check" class="nav-item ">
-        <a class="nav-link" routerLink='addproductorder'>Order Product </a>
-
-      </li>
+   
       <li *ngIf="!check" class="nav-item " (click)="loginCheck()">
         <a class="nav-link">User Login</a>
 
