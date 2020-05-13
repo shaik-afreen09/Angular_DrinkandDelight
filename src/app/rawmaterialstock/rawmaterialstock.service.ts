@@ -12,7 +12,7 @@ export class RawMaterialStockService
    rms:RawMaterialStock;
    public getOrder(orderId:number)  : Observable<RawMaterialStock>   
    {
-      return this.httpClient.get<any>('http://localhost:8015/rawmaterial/getOrder/'+orderId);
+      return this.httpClient.post<any>('http://localhost:8015/rawmaterial/getOrder',{"orderId":orderId});
    }
    public getAll()  : any 
    {

@@ -12,7 +12,7 @@ export class ProductStockService {
   ps:ProductStock;
    public getOrder(orderId:number)  : Observable<ProductStock>   
    {
-      return this.httpClient.get<any>('http://localhost:8015/productstock/getOrder/'+orderId);
+      return this.httpClient.post<any>('http://localhost:8015/productstock/getOrder',{"orderId":orderId});
    }
    public getAll()  : any 
    {

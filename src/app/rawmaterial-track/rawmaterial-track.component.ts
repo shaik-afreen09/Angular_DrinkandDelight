@@ -39,7 +39,7 @@ this.rawservice.getOrder(data.orderId).subscribe((rms)=>{
   this.message=`<center>Please Enter Correct Rawmaterial Id. Entered Rawmaterial id is Invalid'</
   center>`;
   else
-  this.message=`<h2 style="text-align:center">Raw Material Stock Details </h2> 
+  this.message=`
   <table *ngIf="single" class="table table-striped col-md-6 container">
   <tr>
      <th>Order Id : ${rms.orderId}</th>

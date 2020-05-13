@@ -33,7 +33,7 @@ this.test=`<center>Please Enter Product Id</center>`;
   this.productService.getOrder(data.orderId).subscribe((data)=>{
 console.log(data.name);
 this.data=data;
-this.test=`<h2 style="text-align:center">Product Stock Details </h2> 
+this.test=`
 <table class="table table-striped col-md-6 container">
    <center> <tr>
       <th>Order Id: ${data.orderId}</th>
