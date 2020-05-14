@@ -6,13 +6,13 @@ export class RawMaterialStock
     quantityUnit:number;
     price:number;
     warehouseId:string;
-    deliveryDate:String;
+    deliveryDate:string;
     manufacturingDate:String;
     expiryDate:String;
     qualityCheck:string;
     processDate:String;
     orderId:number;
-    public constructor(name:string,pricePerUnit:number,quantityValue:number,quantityUnit:number,price:number,warehouseId:string,deliveryDate:String,manufacturingDate:String,expiryDate:String,qualityCheck:string,processDate:String,orderId:number)
+    public constructor(name:string,pricePerUnit:number,quantityValue:number,quantityUnit:number,price:number,warehouseId:string,deliveryDate:string,manufacturingDate:String,expiryDate:String,qualityCheck:string,processDate:String,orderId:number)
 {
       this.name=name;
       this.pricePerUnit=pricePerUnit;

@@ -17,7 +17,7 @@ updateexit(data)
 
 
 
-  this.productService.updateExitDate(data.productid,data.exitdate).subscribe((data)=>{
+  this.productService.updateExitDate(data.productid,data.exitdate,data.deliverydate).subscribe((data)=>{
    // alert("Data Updated Succesfully");
 console.log(data);
     if(data!="Item Not Found")

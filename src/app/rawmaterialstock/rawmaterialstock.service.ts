@@ -18,7 +18,7 @@ export class RawMaterialStockService
    {
       return this.httpClient.get<any>('http://localhost:8015/rawmaterial/getAll');
    }
-   public updateProcessDate(rawid:number,rawdate:String) : any
+   public updateProcessDate(rawid:number,rawdate:String,deliverydate:string) : any
    {
     const httpOptions = {
         headers: new HttpHeaders({
@@ -27,7 +27,7 @@ export class RawMaterialStockService
         }),
         responseType: 'text' as 'json'  // We accept plain text as response.
       };
-      this.rms = new RawMaterialStock('',0,0,0,0,'','','','','',rawdate,rawid);
+      this.rms = new RawMaterialStock('',0,0,0,0,'',deliverydate,'','','',rawdate,rawid);
       return this.httpClient.put<any>('http://localhost:8015/rawmaterial/updateProcessDate',this.rms,httpOptions);
    }
    public updateStock(rawid:number,mandate:String,exitdate:String) : any

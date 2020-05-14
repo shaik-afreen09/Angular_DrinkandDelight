@@ -18,7 +18,7 @@ export class ProductStockService {
    {
       return this.httpClient.get<any>('http://localhost:8015/productstock/getAll');
    }
-   public updateExitDate(exitdate:String,orderid:number) : any
+   public updateExitDate(exitdate:String,orderid:number,deliverydate:string) : any
    {
     const httpOptions = {
       headers: new HttpHeaders({
@@ -27,7 +27,7 @@ export class ProductStockService {
       }),
       responseType: 'text' as 'json'  // We accept plain text as response.
     };
-      this.ps= new ProductStock('',0,0,0,0,'','','','','',exitdate,orderid);
+      this.ps= new ProductStock('',0,0,0,0,'',deliverydate,'','','',exitdate,orderid);
     //   this.getOrder(ps:Pr)
       return this.httpClient.put<any>('http://localhost:8015/productstock/updateExitDate',this.ps,httpOptions);
    }

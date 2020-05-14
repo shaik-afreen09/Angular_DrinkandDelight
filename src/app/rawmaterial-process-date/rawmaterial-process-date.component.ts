@@ -21,7 +21,7 @@ processupdate(data)
  // this.rms.orderId=data.rawid;
  // this.rms.processDate=data.rawdate;
   
-  this.rawservice.updateProcessDate(data.rawid,data.rawdate).subscribe((data)=>{
+  this.rawservice.updateProcessDate(data.rawid,data.rawdate,data.deliverydate).subscribe((data)=>{
     if(data!="Item Not Found")
     alert("Data Updated Succesfully");
     else
